@@ -1,0 +1,98 @@
+S/N	SYMPTOMS OF RESPIRATORY DISTRESS SYNDROME	DIAGNOSIS	TREATMENT	PREVENTION
+1	Rapid, laboured grunting repirations appearing immediately or within a few hours of delivery, with suprasternal and subternal retractions and flaring of the nasal alae.
+As atelectasis and respiratory failure progress, symptoms worsen, with cyanosis, lethargy, irregular breathing, and apnea, and may ultimately lead to cardiac failure if adequate lung expansion, ventilation, and oxygenation are not established.	Clinical Evaluation
+
+Arterial blood gases (hypoxemia and hypercapnia)	•	
+Intratracheal surfactant if indicated: Specific treatment of RDS is intratracheal surfactant therapy. This therapy requires endotracheal intubation, which also may be necessary to achieve adequate ventilation and oxygenation.
+•		When a fetus must be delivered between 24 weeks and 34 weeks, giving the mother betamethasone or dexamethasone before delivery induces fetal surfactant production and reduces the risk of RDS or decreases its severity. 
+2	Neonates weighing < 1000 g may have lungs so stiff that they are unable to initiate or sustain respirations in the delivery room.	Chest X-ray	•	
+Supplementary oxygen as needed
+•		Neonates who completed < 30 weeks gestation, especially those who were not exposed to antenatal corticosteroids, are at high risk of developing RDS. Giving prophylactic intratracheal surfactant therapy to these neonates has been shown to decrease risk of neonatal death and certain forms of pulmonary morbidity (eg, pneumothorax).
+3	On examination, breath sounds are decreased, and crackles may be heard.	Blood, cerebrospinal fluid, and tracheal aspirate cultures	•	
+Mechanical ventilation as needed
+•		
+
+
+RDS is primarily seen in premature infants and is caused by a deficiency in surfactant, a substance that helps keep the alveoli in the lungs open. Symptoms include rapid, shallow breathing, grunting, and retractions. Diagnosis is based on clinical presentation, blood gas analysis, and chest X-rays showing a characteristic "ground glass" appearance.
+
+
+
+
+
+
+Neonatal pneumonia is lung infection in a neonate. Onset may be within hours of birth and part of a generalized sepsis syndrome or after 7 days and confined to the lungs. Signs may be limited to respiratory distress or progress to shock and death. Diagnosis is by clinical and laboratory evaluation for sepsis. Treatment is initial broad-spectrum antibiotics changed to organism-specific drugs as soon as possible.
+S/N	SYMPTOMS OF PNEUMONIA	DIAGNOSIS	TREATMENT	PREVENTION
+	Late-onset hospital-acquired pneumonia manifests with unexplained worsening of the patient's respiratory status and increased quantities and a change in the quality of the respiratory secretions (eg, thick and brown). Infants may be acutely ill, with temperature instability and neutropenia.	Chest x-ray
+
+Evaluation includes chest x-ray,
+pulse oximetry, blood cultures, and Gram stain and culture of tracheal aspirate.	Usually vancomycin and a broad-spectrum beta-lactam drug	Erythromycin or azithromycin
+
+Treatment with erythromycin 12.5 mg/kg orally every 6 hours for 14 days or azithromycin 20 mg/kg orally/IV once a day for 3 days typically resolves the pneumonia. Occasionally, however, a second course may be necessary
+				
+				
+				
+
+
+Birth asphyxia is a decrease in blood flow to a newborn’s tissues or a decrease in oxygen in a newborn’s blood before during or just after delivery.
+
+When a baby is born, the doctor or midwife examines the newborn for any obvious abnormalities or signs of distress. The newborn's condition immediately after birth is recorded at 1 minute and at 5 minutes after birth using the Apgar score. The Apgar score is used to assign points for heart rate, effort to breathe, muscle tone, reflexes, and color. A score of 7 to 10 is considered normal, 4 to 6 is intermediate, and 0 to 3 is low. A low Apgar score is a sign that the newborn is having difficulty and may need extra assistance with breathing or blood circulation. The Apgar score does not predict anything about the baby's health after the first few minutes of life.
+
+Symptoms
+Signs and symptoms of birth asphyxia can occur before, during, or just after birth. Before birth, a baby might have an abnormal fetal heart rate or low blood pH levels, which indicate excess acid.
+
+Signs in the baby at birth can indicate a lack of oxygen or blood flow. They include:
+unusual skin tone
+the baby being silent and not crying
+low heart rate
+weak muscle tone
+weak reflexes
+lack of breathing or difficulty breathing
+amniotic fluid stained with meconium
+seizures
+poor circulation
+the baby being limp or lethargic
+low blood pressure
+lack of urination
+abnormal blood clotting
+
+Risk factors for birth asphyxia includeTrusted Source:
+the pregnant person being between the ages of 20 and 25 years
+multiple births, such as delivering twins or triplets
+not attending prenatal care
+low birth weight
+abnormal position of the fetus during delivery
+preeclampsia or eclampsia
+history of birth asphyxia in a previous birth
+
+Treatment
+The type of treatment will depend on the severity and cause of the birth asphyxia. Immediate treatments include:
+
+providing extra oxygen to the pregnant person if birth asphyxia happens before delivery
+emergency or cesarean delivery
+suctioning fluid away from the airways in the case of meconium aspiration syndrome
+putting the newborn on a respirator
+For severe cases of birth asphyxia, treatment may include:
+
+placing the baby in a hyperbaric oxygen tank, which supplies 100% oxygen to the baby
+induced hypothermia to cool the body and help prevent brain damage
+medication to regulate blood pressure
+dialysis to support the kidneys and remove excess waste from the body
+medication to help control seizures
+intravenous (IV) nutrition
+a breathing tube to supply nitric oxide
+life support with a heart and lung pump
+
+Characteristics	Acronym	Score		
+		0	1	2
+Color of skin	Appearance	All blue pale	Pink body, blue hands and feet	All pink
+Heart rate	Pulse	No Pulse	Less than 100 beats per minute	More than 100 beats per minutes
+Reflex response to stimulation of the nose (by touching it with a ginger or a catheter)	Grimace	No response to stimulaton	Grimace	Sneeze Cough
+Muscle tone	Activity	Limp, no movement	Some bending of arms and legs	Active movement
+Breathing	Respiration	No breathing	Irregular slow	Good cry
+
+* The word "Apgar" is also an acronym. The letters A, P, G, A, and R correspond to the bold letters in this column.
+
+† The baby is given a score from 0 to 2 for each of 5 characteristics. A total score of 7 to 10 at 5 minutes is considered normal, 4 to 6 is intermediate, and 0 to 3 is low.
+
+
+

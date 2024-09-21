@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Virtual Medical Assistant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-color: #f5f5f5; /* Light Gray */
+        color: #000000; /* Calm Blue */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: auto;
+      }
+
+      .chat-container {
+        width: 100%;
+        max-width: 480px; /* Max width for larger screens */
+        height: 100%;
+        max-height: 90vh; /* Prevents it from being too tall */
+        background-color: #ffffff; /* Pure White */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .header {
+        background-color: #e6e6fa; /* Lavender */
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #dcdcdc; /* Light Gray */
+      }
+
+      .header h1 {
+        margin: 0;
+        color: #8b4513; /* Earthy Brown */
+        font-size: 1.2em;
+      }
+
+      .chat-window {
+        flex: 1;
+        overflow-y: auto;
+        padding: 10px;
+        border-bottom: 1px solid #e6e6fa; /* Lavender */
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      .message {
+        margin: 8px 0;
+        padding: 10px;
+        border-radius: 6px;
+        background-color: #f5f5f5; /* Light Gray */
+      }
+
+      .user-message {
+        text-align: right;
+        background-color: #98ff98; /* Mint Green */
+      }
+
+      .bot-message {
+        text-align: left;
+        background-color: #ffc0cb; /* Soft Pastel Pink */
+      }
+
+      .input-area {
+        display: flex;
+        border-top: 1px solid #e6e6fa; /* Lavender */
+        background-color: #ffffff; /* Pure White */
+        box-sizing: border-box;
+      }
+
+      input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        font-size: 16px;
+        box-sizing: border-box;
+        outline: none;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+      }
+
+      button#send {
+        background-color: #7ed321; /* Healthy Green */
+        color: #ffffff; /* Pure White */
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        font-size: 16px;
+        outline: none;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+
+      button#send:disabled {
+        background-color: #d3d3d3; /* Light Gray */
+        cursor: not-allowed;
+      }
+
+      #loading {
+        display: none;
+        text-align: center;
+        padding: 10px;
+      }
+
+      #loading img {
+        width: 30px;
+        height: 30px;
+      }
+
+      a {
+        color: #7ed321; /* Healthy Green */
+        text-decoration: none;
+      }
+
+      .placeholder-animate::placeholder {
+        transition: color 0.3s ease-in-out;
+        color: #b0b0b0;
+      }
+
+      .placeholder-animate:focus::placeholder {
+        color: transparent;
+      }
+
+      @media (max-width: 600px) {
+        .chat-container {
+          width: 95vw;
+          height: 85vh;
+          max-width: none;
+          max-height: none;
+          border-radius: 0;
+        }
+
+        .header {
+          padding: 8px;
+        }
+
+        .header h1 {
+          font-size: 1em;
+        }
+
+        .chat-window {
+          padding: 8px;
+        }
+
+        .input-area input[type="text"],
+        button#send {
+          padding: 8px;
+          font-size: 14px;
+        }
+
+        button#send {
+          padding: 8px 10px;
+          font-size: 14px;
+        }
+
+        #loading img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      /* For screens taller than usual (e.g., S10e) */
+      @media (min-height: 700px) {
+        .chat-container {
+          max-height: 85vh; /* Reduces the height slightly for very tall screens */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="header">
+        <h1>Virtual Medical Assistant</h1>
+      </div>
+      <div class="chat-window" id="chat-window">
+        <div id="response"></div>
+      </div>
+      <div id="loading">
+        <img src="https://i.gifer.com/ZZ5H.gif" alt="Loading..." />
+      </div>
+      <div class="input-area">
+        <input
+          type="text"
+          id="query"
+          class="placeholder-animate"
+          placeholder="Enter your query here"
+        />
+        <button id="send">Send</button>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      function showLoading() {
+        document.getElementById("loading").style.display = "block";
+        $("#send").prop("disabled", true);
+      }
+
+      function hideLoading() {
+        document.getElementById("loading").style.display = "none";
+        $("#send").prop("disabled", false);
+      }
+
+      function scrollToBottom() {
+        var chatWindow = document.getElementById("chat-window");
+        chatWindow.scrollTop = chatWindow.scrollHeight;
+      }
+
+      function sendMessage() {
+        if (document.getElementById("loading").style.display === "block") {
+          alert("Please wait for the current request to complete.");
+          return;
+        }
+
+        var query = $("#query").val();
+        if (!query) {
+          alert("Please enter a query.");
+          return;
+        }
+        showLoading();
+        $.ajax({
+          url: "/chat",
+          type: "POST",
+          contentType: "application/json",
+          data: JSON.stringify({ query: query }),
+          success: function (response) {
+            hideLoading();
+            $("#response").append(
+              '<div class="message user-message"><p>' + query + "</p></div>"
+            );
+            var responseText = response.answer;
+            var clickableResponse = responseText.replace(
+              /((http|https):\/\/[\w\-_]+(\.[\w\-_]+)+([\w\-\.,@?^=%&amp;:/~\+#]*[\w\-\@?^=%&amp;/~\+#])?)/g,
+              '<a href="$1" target="_blank">$1</a>'
+            );
+            $("#response").append(
+              '<div class="message bot-message"><p>' +
+                clickableResponse +
+                "</p></div>"
+            );
+            $("#query").val("");
+            scrollToBottom();
+          },
+          error: function () {
+            hideLoading();
+            alert("An error occurred. Please try again.");
+          },
+        });
+      }
+
+      $("#send").prop("disabled", true);
+      $("#send").click(sendMessage);
+
+      $("#query").on("input", function () {
+        $("#send").prop("disabled", !$(this).val());
+      });
+
+      $("#query").keypress(function (e) {
+        if (e.which == 13) {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+    </script>
+  </body>
+</html>
